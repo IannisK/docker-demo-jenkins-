@@ -1,6 +1,6 @@
 FROM node
 WORKDIR /app
 ADD . /app
-RUN apt-get -y install nodejs
+RUN npm install
 EXPOSE 3000
-CMD service nodejs start
+CMD npm start
