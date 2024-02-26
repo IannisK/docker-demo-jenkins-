@@ -1,6 +1,6 @@
 FROM node
 WORKDIR /app
 ADD . /app
-RUN npm install
+RUN apt-get install npm
 EXPOSE 3000
-CMD npm start
+CMD systemctl start npm
