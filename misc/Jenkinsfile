@@ -12,7 +12,7 @@ node {
      }
    }
    stage('docker build/push') {
-     docker.withRegistry('https://registry.hub.docker.com/v2/', 'dockerhub') {
+     docker.withRegistry('https://registry.hub.docker.com/v2/', 'docker-token') {
        def app = docker.build("iannisk13/jenkins-study:${commit_id}", '.').push()
      }
    }
